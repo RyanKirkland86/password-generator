@@ -22,7 +22,7 @@ When the user encounters the page, they click on the big red button that says "G
 
 <br>
 
-![Image]()
+![Image](https://github.com/RyanKirkland86/password-generator/blob/main/assets/FirstPrompt.jpg)
 
 ```javascript
 function generatePassword() {
@@ -42,7 +42,7 @@ Then the user encounters a series of prompts asking them what sort of character 
 
 <br>
 
-![Image]()
+![Image](https://github.com/RyanKirkland86/password-generator/blob/main/assets/CharacterPrompts.jpg)
 
 ```javascript
   function generateArray() {
