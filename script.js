@@ -21,6 +21,7 @@ The password must be 8 <= password length <= 128.
 IF it is not, THEN we must alert the user with two separate alerts.
 One needs to be that the password needs to be 8 or more characters.
 The other needs to be that the password 128 or less characters. 
+We need to return the user to the beginning to pick a value within our parameters.
 STORE THE USER CHOICE - This will be the value we use for how many times we run the function */
 
 
@@ -28,11 +29,11 @@ function generatePassword() {
   var charNum = prompt("How many characters would you like your password to contain?");
   if (charNum < 8) {
     alert("Password must have 8 or more characters!");
-    generatePassword();
+    return null;
   }
   else if (charNum > 128) {
     alert("Password must be 128 characters or less!");
-    generatePassword();
+    return null;
   }
 
 
