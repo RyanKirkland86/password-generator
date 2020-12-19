@@ -16,6 +16,14 @@ generateBtn.addEventListener("click", writePassword);
 
 // When you click the button, it should issue a series of prompts.
 
+/* First, how many characters would you like the password to contain?
+The password must be 8 <= password length <= 128.
+IF it is not, THEN we must alert the user with two separate alerts.
+One needs to be that the password needs to be 8 or more characters.
+The other needs to be that the password 128 or less characters. 
+STORE THE USER CHOICE - This will be the value we use for how many times we run the function */
+
+
 function generatePassword() {
   var charNum = prompt("How many characters would you like your password to contain?");
   if (charNum < 8) {
@@ -26,6 +34,16 @@ function generatePassword() {
     alert("Password must be 128 characters or less!");
     generatePassword();
   }
+
+
+/* Then we will issue 4 confirm statements for character types.
+1. Special characters
+2. Numeric characters
+3. Lowercase characters
+4. Uppercase characters
+IF none are selected, alert that at least one character type must be selected. */
+
+// Create arrays of all four choices for characters, as well as one we can concatenate with the user's choices.
 
   var charChoice = [];
   var specialChar = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", ">", "=", "?", "@", "[", "]", "^", "_", "{", "}", "~"];
@@ -58,25 +76,21 @@ function generatePassword() {
       generateArray();
     }
   }
-  
   console.log(charChoice);
+
+/* Now we need to take the array we generated and randomly select characters from it.
+We should do this however many times the user selected for their password length */  
+  buildPassword();
+
+  function buildPassword(){
+    var randomChar = charChoice[Math.floor(Math.random() * charChoice.length)];
+    console.log(randomChar);
+    
+  }
+
+
 
 }
 
-
-/* First, how many characters would you like the password to contain?
-The password must be 8 <= password length <= 128.
-IF it is not, THEN we must alert the user with two separate alerts.
-One needs to be that the password needs to be 8 or more characters.
-The other needs to be that the password 128 or less characters. 
-STORE THE USER CHOICE - This will be the value we use for how many times we run the function */
-
-
-/* Then we will issue 4 confirm statements for character types.
-1. Special characters
-2. Numeric characters
-3. Lowercase characters
-4. Uppercase characters
-IF none are selected, alert that at least one character type must be selected. */
 
 
