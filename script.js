@@ -78,14 +78,19 @@ IF none are selected, alert that at least one character type must be selected. *
   }
   console.log(charChoice);
 
+
 /* Now we need to take the array we generated and randomly select characters from it.
 We should do this however many times the user selected for their password length */  
+
+  var randomArray = [];
+
   buildPassword();
 
   function buildPassword(){
-    var randomChar = charChoice[Math.floor(Math.random() * charChoice.length)];
-    console.log(randomChar);
-    
+    for (var i = 0; i < charNum; i++) {
+      var randomChar = charChoice[Math.floor(Math.random() * charChoice.length)];
+      console.log(randomChar);
+    }
   }
 
 
