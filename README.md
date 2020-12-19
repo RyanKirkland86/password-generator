@@ -7,7 +7,7 @@ This is a password generator that anyone can use to generate a unique, random, a
 
 <br>
 
-![Image](https://github.com/RyanKirkland86/password-generator/blob/main/assets/images/PasswordGenerator.png)
+![Image](https://github.com/RyanKirkland86/password-generator/blob/main/assets/PasswordGenerator.png)
 
 <br>
 
