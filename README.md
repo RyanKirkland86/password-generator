@@ -9,8 +9,6 @@ This is a password generator that anyone can use to generate a unique, random, a
 
 ![Image](https://github.com/RyanKirkland86/password-generator/blob/main/assets/PasswordGenerator.png)
 
-<br>
-
 ## Technologies Used:
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -69,6 +67,8 @@ Then the user encounters a series of prompts asking them what sort of character 
 The password is then displayed for the user after running a function which randomly selects characters based on the password length and character choices of the user.
 
 <br>
+
+![Image](https://github.com/RyanKirkland86/password-generator/blob/main/assets/PasswordGenerated.jpg)
 
 ```javascript
 function buildPassword(){
