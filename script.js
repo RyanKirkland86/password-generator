@@ -42,22 +42,23 @@ function generatePassword() {
 
   function generateArray() {
     if (confirm("Would you like to use special characters in your password?")) {
-      charChoice.push(specialChar);
+      charChoice = charChoice.concat(specialChar);
     }
     if (confirm("Would you like to use lowercase characters in your password?")) {
-      charChoice.push(lowChar);
+      charChoice = charChoice.concat(lowChar);
     }
     if (confirm("Would you like to use uppercase characters in your password?")) {
-      charChoice.push(upChar);
+      charChoice = charChoice.concat(upChar);
     }
     if (confirm("Would you like to use number characters in your password?")) {
-      charChoice.push(numChar);
+      charChoice = charChoice.concat(numChar);
     }
-    else {
+    else if (charChoice.length === 0) {
       alert("You must select at least one character choice!");
       generateArray();
     }
   }
+  
   console.log(charChoice);
 
 }
