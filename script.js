@@ -80,7 +80,8 @@ IF none are selected, alert that at least one character type must be selected. *
 
 
 /* Now we need to take the array we generated and randomly select characters from it.
-We should do this however many times the user selected for their password length */  
+We should do this however many times the user selected for their password length.
+Concatenate these random values into a new array. */  
 
   var randomArray = [];
 
@@ -94,8 +95,10 @@ We should do this however many times the user selected for their password length
     console.log(randomArray);
   }
 
+//Now take the randomly concatenated array, and join it into a single string.
 
-
+  var final = randomArray.join("");
+  return final;
 }
 
 
