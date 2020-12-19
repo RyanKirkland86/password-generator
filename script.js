@@ -89,8 +89,9 @@ We should do this however many times the user selected for their password length
   function buildPassword(){
     for (var i = 0; i < charNum; i++) {
       var randomChar = charChoice[Math.floor(Math.random() * charChoice.length)];
-      console.log(randomChar);
+      randomArray.push(randomChar);
     }
+    console.log(randomArray);
   }
 
 
