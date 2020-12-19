@@ -38,6 +38,28 @@ function generatePassword() {
   console.log(upChar);
   console.log(numChar);
 
+  generateArray();
+
+  function generateArray() {
+    if (confirm("Would you like to use special characters in your password?")) {
+      charChoice.push(specialChar);
+    }
+    if (confirm("Would you like to use lowercase characters in your password?")) {
+      charChoice.push(lowChar);
+    }
+    if (confirm("Would you like to use uppercase characters in your password?")) {
+      charChoice.push(upChar);
+    }
+    if (confirm("Would you like to use number characters in your password?")) {
+      charChoice.push(numChar);
+    }
+    else {
+      alert("You must select at least one character choice!");
+      generateArray();
+    }
+  }
+  console.log(charChoice);
+
 }
 
 
