@@ -16,6 +16,18 @@ generateBtn.addEventListener("click", writePassword);
 
 // When you click the button, it should issue a series of prompts.
 
+function generatePassword() {
+  var charNum = prompt("How many characters would you like your password to contain?");
+  if (charNum < 8) {
+    alert("Password must have 8 or more characters!");
+    generatePassword();
+  }
+  else if (charNum > 128) {
+    alert("Password must be 128 characters or less!");
+    generatePassword();
+  }
+}
+
 
 /* First, how many characters would you like the password to contain?
 The password must be 8 <= password length <= 128.
